@@ -1,3 +1,6 @@
+# Fork
+This repo is a fork of the original repo from Lluis ([https://github.com/lluisb3/histo_lung](https://github.com/lluisb3/histo_lung))
+
 # histo_lung
 This repository contains the full pipeline to analyze histopathological lung Whole Slide Images
 (WSIs).
