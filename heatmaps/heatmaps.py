@@ -265,7 +265,9 @@ def main(wsi_name, sigma):
 
     cfg = yaml_load(modeldir / f"config_f_MIL_res34v2_v2_rumc_best_cosine_v3.yml")
 
-    checkpoint = torch.load(modeldir / "fold_0" / "checkpoint.pt")
+    #checkpoint = torch.load(modeldir / "fold_0" / "checkpoint.pt")
+    checkpoint = torch.load(modeldir / "fold_0" / "checkpoint.pt", map_location=torch.device('cpu'))
+
 
     print(f"Loaded Model using {cfg.model.model_name} as backbone")
           

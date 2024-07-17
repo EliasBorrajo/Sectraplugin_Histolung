@@ -1,0 +1,288 @@
+{
+    "os": "Linux-5.4.0-149-generic-x86_64-with-glibc2.31",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-06-02T21:43:41.298154",
+    "startedAt": "2023-06-02T21:43:39.735643",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "-m training.train_MIL_k_fold_rumc",
+    "git": {
+        "remote": "https://github.com/lluisb3/histo_lung.git",
+        "commit": "1428f5c4c3d9e463a48aed7d6dae3d87b2a0cbb5"
+    },
+    "email": "lluisb3@gmail.com",
+    "root": "/home/lluis/histo_lung",
+    "host": "lxhextrafast",
+    "username": "lluis",
+    "executable": "/home/lluis/miniconda3/envs/hlung/bin/python3",
+    "cpu_count": 24,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 1647.734145833333,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2152.084,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.01,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2015.208,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.004,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1681.287,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.006,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2686.604,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.995,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2624.452,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.99,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1445.028,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.006,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.006,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.003,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1214.04,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.005,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2383.301,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.007,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.006,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2778.85,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2809.965,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2577.953,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2932.119,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2247.34,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.007,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1821.853,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.001,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1781.079,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.007,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2780.592,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2661.403,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.002,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1503.908,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.005,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1000.002,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.994,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1430.096,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.991,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2276.628,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.992,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.995,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 999.99,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2626.678,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2999.245,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2595.995,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3065.509,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 2931.3981018066406,
+        "used": 2547.913585662842
+    },
+    "gpu": "Quadro RTX 6000",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "Quadro RTX 6000",
+            "memory_total": 24159191040
+        },
+        {
+            "name": "NVIDIA A100 80GB PCIe",
+            "memory_total": 85899345920
+        }
+    ],
+    "memory": {
+        "total": 251.52679061889648
+    }
+}

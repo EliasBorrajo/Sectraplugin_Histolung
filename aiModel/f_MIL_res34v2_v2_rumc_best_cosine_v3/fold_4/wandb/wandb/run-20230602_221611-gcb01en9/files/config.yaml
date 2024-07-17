@@ -1,0 +1,185 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.14.0
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    m:
+    - 1: epoch
+      6:
+      - 3
+      7:
+      - 2
+    - 1: train/lr
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: iterations
+    - 1: train/loss_iter
+      5: 3
+      6:
+      - 1
+      - 3
+    - 1: train/loss
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: train/accuracy
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: train/auc_micro
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: train/f1_score_micro
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: train/f1_score_macro
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: train/f1_score_weighted
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: validation/loss
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: validation/accuracy
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: validation/auc_micro
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: validation/f1_score_micro
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: validation/f1_score_macro
+      5: 1
+      6:
+      - 1
+      - 3
+    - 1: validation/f1_score_weighted
+      5: 1
+      6:
+      - 1
+      - 3
+    python_version: 3.9.16
+    start_time: 1685744171.265526
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      - 80
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      - 80
+      3:
+      - 2
+      - 7
+      - 13
+      - 16
+      - 23
+      4: 3.9.16
+      5: 0.14.0
+      8:
+      - 5
+data_augmentation:
+  desc: null
+  value:
+    boolean: false
+    featuresdir: Features_resnet34_v2_NoChannel
+    prob: 0.5
+dataloader:
+  desc: null
+  value:
+    batch_size: 512
+    batch_size_bag: 1
+    num_workers: 1
+dataset:
+  desc: null
+  value:
+    magnification: '10'
+    mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    stddev:
+    - 0.229
+    - 0.224
+    - 0.225
+experiment_name:
+  desc: null
+  value: f_MIL_res34v2_v2_rumc_best_cosine_v3
+model:
+  desc: null
+  value:
+    dropout: 0.2
+    embedding_bool: true
+    freeze_weights: false
+    hidden_space_len: 128
+    model_name: resnet34
+    num_classes: 4
+    num_frozen_layers: 0
+    pool_algorithm: attention
+training:
+  desc: null
+  value:
+    criterion: BCEWithLogitsLoss
+    criterion_args:
+      weights:
+      - 0.824
+      - 0.477
+      - 0.809
+      - 0.742
+    early_stop: 15
+    epochs: 40
+    lr_scheduler: CosineAnnealingLR
+    lr_scheduler_args:
+      T_max: 10
+      eta_min: 3.0e-05
+    optimizer: Adam
+    optimizer_args:
+      amsgrad: true
+      betas:
+      - 0.9
+      - 0.999
+      eps: 1.0e-08
+      lr: 0.0003
+      momentum: 0.9
+      weight_decay: 0.0001
+    resume_training: false
+wandb:
+  desc: null
+  value:
+    enable: true
+    group: MIL_best
+    project: histo_lung
+    username: lluisb3

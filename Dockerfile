@@ -23,7 +23,8 @@ RUN apt-get update && \
 USER user
 
 # Install Python and git
-RUN sudo apt-get install -y python3.9 python3.9-dev python3-pip git-all openslide-tools
+RUN sudo apt-get update && \ 
+    sudo apt-get install -y python3.9 python3.9-dev python3-pip git-all openslide-tools
 
 ENV PATH=/home/user/.local/bin:$PATH
 
@@ -37,8 +38,16 @@ WORKDIR /home/user/app
 COPY --chown=user:user . /home/user/app
 RUN chmod -R ug+rwx /home/user/app
 
+# Create output directory with correct permissions
+RUN mkdir -p /home/user/app/data/outputs && chown -R user:user /home/user/app/data/outputs
+
+
 # Install necesary requeriments and dependencies
 RUN pip3 install -r requirements.txt
+
+# Copy the entire directory into the container
+COPY --chown=user:user aiModel/f_MIL_res34v2_v2_rumc_best_cosine_v3 /home/user/app/trained_models/MIL/f_MIL_res34v2_v2_rumc_best_cosine_v3
+
 
 # Default entrypoint
 CMD [ "/bin/bash" ]
