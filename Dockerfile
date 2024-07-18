@@ -28,25 +28,25 @@ RUN sudo apt-get update && \
 
 ENV PATH=/home/user/.local/bin:$PATH
 
-# Create mask3D app and output folders
-RUN mkdir -p /home/user/app
+# Create mask3D appHistolung and output folders
+RUN mkdir -p /home/user/appHistolung
 
-# Change Workdirectory to mask3D app
-WORKDIR /home/user/app
+# Change Workdirectory to mask3D appHistolung
+WORKDIR /home/user/appHistolung
 
 # Copy files into the container and set the appropriate permissions
-COPY --chown=user:user . /home/user/app
-RUN chmod -R ug+rwx /home/user/app
+COPY --chown=user:user . /home/user/appHistolung
+RUN chmod -R ug+rwx /home/user/appHistolung
 
 # Create output directory with correct permissions
-RUN mkdir -p /home/user/app/data/outputs && chown -R user:user /home/user/app/data/outputs
+RUN mkdir -p /home/user/appHistolung/data/outputs && chown -R user:user /home/user/appHistolung/data/outputs
 
 
 # Install necesary requeriments and dependencies
 RUN pip3 install -r requirements.txt
 
 # Copy the entire directory into the container
-COPY --chown=user:user aiModel/f_MIL_res34v2_v2_rumc_best_cosine_v3 /home/user/app/trained_models/MIL/f_MIL_res34v2_v2_rumc_best_cosine_v3
+COPY --chown=user:user aiModel/f_MIL_res34v2_v2_rumc_best_cosine_v3 /home/user/appHistolung/trained_models/MIL/f_MIL_res34v2_v2_rumc_best_cosine_v3
 
 
 # Default entrypoint

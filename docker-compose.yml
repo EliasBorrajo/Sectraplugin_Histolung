@@ -9,10 +9,7 @@ services:
     container_name: hlung
     volumes: 
     # Share the host & container directories.
-      - /home/elias/tbSectra/ai/data/tcga/wsi:/home/user/app/data/tcga/wsi
-      - /home/elias/tbSectra/ai/data/tcga/patches:/home/user/app/data/tcga/patches
-      - /home/elias/tbSectra/ai/data/tcga/mask:/home/user/app/data/tcga/mask
-      - /home/elias/tbSectra/ai/data/tcga/labels_tcga_all.csv:/home/user/app/data/tcga/labels_tcga_all.csv
-      - /home/elias/tbSectra/ai/data/tcga/outputs:/home/user/app/data/tcga/outputs
+      - /home/elias/tbSectra/ai/data/tcga:/home/user/appHistolung/data/tcga 
+      - /home/elias/tbSectra/ai/data/tcga/outputs:/home/user/appHistolung/data/outputs 
     # Entrypoint to run the heatmaps script with the WSI_NAME and SIGMA as arguments in the .env file
     entrypoint: ["python3", "-u", "-m", "heatmaps.heatmaps", "--wsi_name", "${WSI_NAME}", "--sigma", "${SIGMA}"]
