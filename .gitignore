@@ -112,7 +112,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+#.env #commented to have a basic .env in the git
 .venv
 env/
 venv/

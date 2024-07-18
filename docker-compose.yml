@@ -1,15 +1,18 @@
 # Docker compose to run the docker image lluisb3/mask3d (non-root image)#
 # Create image running docker-build-script.sh to create user with same ID as hosr user #
 # IMPORTANT to create directories in volumes on the host machine with user ownership before running #
+# Variables as "${TAG} , ${WSI_NAME}" and "${SIGMA}" are defined in the .env file 
 
 services:
   hlung:
     image: lluisb3/hlung:${TAG}
+    container_name: hlung
     volumes: 
-      - /home/elias/tbSectra/ai/data/tcga/wsi/TCGA-18-3417-01Z-00-DX1.tif:/home/user/app/data/tcga/wsi/TCGA-18-3417-01Z-00-DX1.tif
-      - /home/elias/tbSectra/ai/data/tcga/patches/TCGA-18-3417-01Z-00-DX1.tif:/home/user/app/data/tcga/patches/TCGA-18-3417-01Z-00-DX1.tif
-      - /home/elias/tbSectra/ai/data/tcga/mask/TCGA-18-3417-01Z-00-DX1.tif:/home/user/app/data/tcga/mask/TCGA-18-3417-01Z-00-DX1.tif
+    # Share the host & container directories.
+      - /home/elias/tbSectra/ai/data/tcga/wsi:/home/user/app/data/tcga/wsi
+      - /home/elias/tbSectra/ai/data/tcga/patches:/home/user/app/data/tcga/patches
+      - /home/elias/tbSectra/ai/data/tcga/mask:/home/user/app/data/tcga/mask
       - /home/elias/tbSectra/ai/data/tcga/labels_tcga_all.csv:/home/user/app/data/tcga/labels_tcga_all.csv
       - /home/elias/tbSectra/ai/data/tcga/outputs:/home/user/app/data/tcga/outputs
-    container_name: hlung
+    # Entrypoint to run the heatmaps script with the WSI_NAME and SIGMA as arguments in the .env file
     entrypoint: ["python3", "-u", "-m", "heatmaps.heatmaps", "--wsi_name", "${WSI_NAME}", "--sigma", "${SIGMA}"]
