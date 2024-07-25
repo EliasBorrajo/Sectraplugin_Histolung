@@ -5,11 +5,11 @@
 
 services:
   hlung:
-    image: lluisb3/hlung:${TAG}
+    image: lluisb3/hlung:${TAG} 
     container_name: hlung
-    volumes: 
-    # Share the host & container directories.
-      - /home/elias/tbSectra/ai/data/tcga:/home/user/appHistolung/data/tcga 
-      - /home/elias/tbSectra/ai/data/tcga/outputs:/home/user/appHistolung/data/outputs 
+    volumes:
+      - /home/elias/tbSectra/ai/data/tcga:/home/user/appHistolung/data/tcga
+      - /home/elias/tbSectra/ai/data/outputs:/home/user/appHistolung/data/outputs
+      - /home/elias/tbSectra/ai/histo_lung/.env:/home/user/appHistolung/.env:ro
     # Entrypoint to run the heatmaps script with the WSI_NAME and SIGMA as arguments in the .env file
     entrypoint: ["python3", "-u", "-m", "heatmaps.heatmaps", "--wsi_name", "${WSI_NAME}", "--sigma", "${SIGMA}"]
